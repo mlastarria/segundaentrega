@@ -8,8 +8,6 @@
 
 /* Estilos Generales Mobile First*/
 
-
-
 body{
 background:linear-gradient(#FCF9FA, #FDE0EE);
 margin: 0px;
@@ -20,14 +18,37 @@ padding: 0px;
 
 .container-hippo{ 
   display:grid;
-  grid-template-columns: 100vw;
+  grid-template-columns: 100%;
   grid-template-rows: auto auto auto auto;
   grid-template-areas: "header" "hero" "main" "footer";
 }
 
 
+/* Botones para clases de Bootstrap */
+.btn-ht1{
+  background-color: #36CC60;
+  border: 1px solid #2abe54;
+  color:#fff;
+}
+
+.btn-ht1:hover{
+  background-color: #50ee7d;
+ 
+ 
+}
 
 
+.btn-ht2{
+  background-color: #FCF9FA;
+  border: 1px solid #a78094;
+  color:#a78094;
+}
+
+.btn-ht2:hover{
+  background-color: #FCE0EE;
+  border: 1px solid #a7939b;
+  
+}
 
 
 /* Header Mobile */
@@ -37,8 +58,22 @@ header{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  
+  animation: animacion--header 1s ease 0s 1 normal forwards;
 }  
+
+@keyframes animacion--header {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 
 
@@ -57,6 +92,7 @@ header{
 .menu{
   padding: 1em;
   font-family: "roboto", sans-serif;
+  font-size: 17px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -87,7 +123,10 @@ header{
 .menu li a:hover{
   background: #07ad33;
   color: white;
+  border-radius: 7px;
 }
+
+
 
 
 
@@ -208,6 +247,30 @@ main h2{
     text-align: left;
     margin-top: 5px;
     color: #FCE0EE;
+    margin-bottom: 5px;
+}
+
+.eth-price{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+ 
+}
+
+.eth-price img{
+  width: 15px;
+  height: fit-content;
+
+ 
+}
+
+.price-card{
+  color: #ffffff;
+  font-size: 14px;
+  padding-left: 5px;
+  
+
 }
 
 
@@ -428,6 +491,13 @@ footer{
     margin-top: 10px;
     text-align: left;
 
+  }
+
+
+  .hero__home--about--nft p:first-letter{
+    color: #2abe54;
+    font-weight: bold;
+    font-size: 1.5em;
   }
 
 
