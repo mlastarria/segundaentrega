@@ -1,0 +1,329 @@
+//Imports
+@import "_commons";
+@import "_fonts";
+@import "_navBar";
+@import "_content";
+@import "_footer";
+
+
+/* Estilos Generales Mobile First*/
+
+body{
+    background:$bgGrad;
+    margin: 0px;
+    padding: 0px;
+    }
+    
+    
+    
+    .container-hippo{ 
+      display:grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "header" "hero" "main" "footer";
+    }
+    
+    
+    /* Botones para clases de Bootstrap */
+    .btn-ht1{
+      background-color: $color4;
+      border: 1px solid #2abe54;
+      color:#fff;
+    }
+    
+    .btn-ht1:hover{
+      background-color: #50ee7d;
+     
+     
+    }
+    
+    
+    .btn-ht2{
+      background-color: #FCF9FA;
+      border: 1px solid #a78094;
+      color:#a78094;
+    }
+    
+    .btn-ht2:hover{
+      background-color: #FCE0EE;
+      border: 1px solid #a7939b;
+      
+    }
+    
+
+
+
+/* MEDIA QUERIES */
+
+/* TABLETS & IPADS */
+@media only screen and (min-width: 768px){
+
+
+    /* Hero TABLETS */
+  
+    .hero__image img , .hero__image--author img{
+      width: 60%;
+      
+    }
+  
+    .bt__hero {
+      font-size:20px;
+      
+    }
+  
+  
+    /* Main TABLET Flexbox (cards)*/
+    
+    main{
+      grid-area: main;
+      width: 90%;
+      margin: 30px auto 0 auto;
+      
+    }
+  
+   
+  
+    main h2{
+      color:#2F2A2C;
+      font-family: $fontHeadline;
+      font-size: 36px;
+      margin-bottom: 0px;
+      margin-top: 10px;
+      text-align: center;
+    }
+  
+    .card-container{
+      display:flex;
+      flex-direction: row;
+      column-gap:10px;
+    }
+   
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* DESKTOP */
+  @media only screen and (min-width: 1024px){
+  
+  
+    .container{ 
+      display:grid;
+      grid-template-columns: 50vw 50vw;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "header header" "hero hero" "main main" "footer footer";
+    }
+    
+    
+  
+    /* Header DESKTOP */
+  
+    header{
+      flex-direction: row;
+      justify-content: space-between;
+      width: 80%;
+      margin: 0 auto 0 auto;
+      
+    }  
+  
+  
+  
+    .logo img {
+      height: 85px;
+      align-self: center;
+    }
+  
+  
+  
+    .menu{
+      align-self: center;
+     
+    }
+  
+  
+  
+  
+  
+    /* Hero DESKTOP Flexbox */
+  
+    .hero__home , .hero__home--author , .hero__home--about--nft , .hero__home--future--projects , .hero__home--contact{
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      column-gap: 25px;
+      margin-top: 20px;
+    
+    }
+  
+    .hero__image , .hero__image--author{
+      order:2;
+      align-self: center;
+      flex-grow: 1;
+      flex-basis: 0;
+      
+    }
+  
+    .hero__contact--form{
+      order:2;
+      align-self: center;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+  
+  
+  
+    .hero__image img , .hero__image--author img , .hero__content--future--projects img{
+      width: 100%;
+      
+    }
+  
+    .hero__content , .hero__content--author , .hero__content--future--projects , .hero__content-contact--info{
+      order:1;
+      align-self: center;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+  
+  
+    .hero__content h1 , .hero__content--author h1  {
+      font-size: 56px;
+      margin-bottom: 0px;
+      margin-top: 5px;
+      text-align: left;
+    
+    }
+  
+  
+    .hero__content--about--nft h1 , .hero__content--future--projects h1 {
+      font-size: 56px;
+      margin-bottom: 0px;
+      margin-top: 5px;
+      text-align: center;
+    }
+  
+  
+  
+    .hero__content p , .hero__content--author p , .hero__home--about--nft p , .hero__content--future--projects p{
+      color: #2F2A2C;
+      font-size: 20px;
+      font-family: $fontText;
+      margin-top: 10px;
+      text-align: left;
+  
+    }
+  
+  
+    .hero__home--about--nft p:first-letter{
+      color: #2abe54;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+  
+  
+    .bt__hero {
+      font-size:19px;
+      padding:15px 25px;
+      margin-top: 25px;
+      display: block;
+      text-align: center;
+      width: 170px;
+    }
+  
+  
+  
+  
+  
+  
+    /* Main DESKETOP Flexbox (cards)*/
+    
+    main{
+      grid-area: main;
+      width: 80%;
+      margin: 65px auto 0 auto;
+      
+    }
+  
+   
+  
+    main h2{
+      color:#2F2A2C;
+      font-family: $fontHeadline;
+      font-size: 43px;
+      margin-bottom: 0px;
+      margin-top: 10px;
+      text-align: left;
+    }
+  
+    .card-container{
+      display:flex;
+      flex-direction: row;
+      column-gap:15px;
+    }
+  
+  
+  
+    /* Footer DESKTOP */
+  
+    footer{
+      grid-area: footer;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 80%;
+      margin: 70px auto 20px auto;
+    }
+  
+    .footer__content{
+      text-align: left;
+    }
+  
+    .footer__content img{
+      height: 75px;
+      margin-bottom: 0px;
+      
+    }
+  
+    .footer__content p{
+      margin-top: 0px;
+    }
+  
+  
+    .social-media{
+  
+      flex-grow: 1;
+      text-align: right;
+      
+    }
+  
+    .social-media ul{
+      list-style: none;
+      padding: 0px;
+  
+  
+    }
+  
+    .social-media ul li{
+      display: inline-block;
+  
+    }
+  
+    .social-media ul li img{
+      width: 30px;
+      padding-left: 10px;
+  
+    }
+  
+  
+  
+  
+  
+  
+  
+  }
+  

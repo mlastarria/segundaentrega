@@ -1,0 +1,353 @@
+/* Fuentes Externas */
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+/* Header Mobile */
+header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  animation: animacion--header 1s ease 0s 1 normal forwards; }
+
+@keyframes animacion--header {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.logo {
+  align-self: center;
+  margin-top: 15px; }
+
+.logo img {
+  height: 90px; }
+
+.menu {
+  padding: 1em;
+  font-family: "roboto", sans-serif;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+  .menu li a {
+    color: #2F2A2C;
+    display: block;
+    text-decoration: none;
+    padding: .5em 1em;
+    font-family: "roboto", sans-serif; }
+  .menu li a:hover {
+    background: #07ad33;
+    color: white;
+    border-radius: 7px; }
+
+/* Hero Mobile */
+.hero__home, .hero__home--author, .hero__home--about--nft, .hero__home--future--projects, .hero__home--contact {
+  grid-area: hero;
+  text-align: center;
+  margin: 20px auto 0 auto;
+  width: 90%; }
+
+.hero__image, .hero__image--author {
+  display: block; }
+
+.hero__image img, .hero__image--author img, .hero__content--future--projects img {
+  width: 100%; }
+
+.hero__content, .hero__content--author, .hero__content--about--nft, .hero__content--future--projects, .hero__content-contact--info {
+  display: block; }
+
+.hero__contact--form {
+  display: block;
+  text-align: left; }
+
+.hero__content h1, .hero__content--author h1, .hero__content--about--nft h1, .hero__content--future--projects h1, .hero__content-contact--info h1 {
+  color: #2F2A2C;
+  font-family: 'Vollkorn', serif;
+  font-size: 46px;
+  margin-bottom: 0px;
+  margin-top: 10px; }
+
+.hero__content--nft {
+  background: #36CC60;
+  background: -webkit-linear-gradient(to bottom right, #36CC60 0%, #0085A9 100%);
+  background: -moz-linear-gradient(to bottom right, #36CC60 0%, #0085A9 100%);
+  background: linear-gradient(to bottom right, #36CC60 0%, #0085A9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.hero__content p, .hero__content--author p, .hero__content--about--nft p, .hero__content--future--projects p, .hero__content-contact--info p {
+  color: #2F2A2C;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 15px; }
+
+/* Main Mobile Flexbox (cards)*/
+main {
+  grid-area: main;
+  width: 80%;
+  margin: 30px auto 0 auto; }
+
+main h2 {
+  color: #2F2A2C;
+  font-family: 'Vollkorn', serif;
+  font-size: 36px;
+  margin-bottom: 0px;
+  margin-top: 10px; }
+
+.card-container {
+  display: flex;
+  flex-direction: column; }
+
+.item-card {
+  background-color: #00B0F5;
+  padding: 15px 20px 15px 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  flex-grow: 1; }
+
+.item-card img {
+  width: 100%;
+  border-radius: 10px; }
+
+.item-card h3 {
+  font-family: 'Vollkorn', serif;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top: 8px;
+  overflow: visible;
+  color: #fff; }
+
+.item-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 5px;
+  color: #FCE0EE;
+  margin-bottom: 5px; }
+
+.eth-price {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center; }
+
+.eth-price img {
+  width: 15px;
+  height: fit-content; }
+
+.price-card {
+  color: #ffffff;
+  font-size: 14px;
+  padding-left: 5px; }
+
+/* Footer Mobile */
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 80%;
+  margin: 20px auto 10px auto; }
+
+.footer__content {
+  flex-grow: 1;
+  text-align: center; }
+
+.footer__content img {
+  height: 70px; }
+
+.footer__content p {
+  font-family: 'Open Sans', sans-serif; }
+
+.social-media {
+  flex-grow: 1;
+  text-align: center; }
+
+.social-media ul {
+  list-style: none;
+  padding: 0px; }
+
+.social-media ul li {
+  display: inline-block; }
+
+.social-media ul li img {
+  width: 30px; }
+
+/* Estilos Generales Mobile First*/
+body {
+  background: linear-gradient(#FCF9FA, #FDE0EE);
+  margin: 0px;
+  padding: 0px; }
+
+.container-hippo {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "header" "hero" "main" "footer"; }
+
+/* Botones para clases de Bootstrap */
+.btn-ht1 {
+  background-color: #36CC60;
+  border: 1px solid #2abe54;
+  color: #fff; }
+
+.btn-ht1:hover {
+  background-color: #50ee7d; }
+
+.btn-ht2 {
+  background-color: #FCF9FA;
+  border: 1px solid #a78094;
+  color: #a78094; }
+
+.btn-ht2:hover {
+  background-color: #FCE0EE;
+  border: 1px solid #a7939b; }
+
+/* MEDIA QUERIES */
+/* TABLETS & IPADS */
+@media only screen and (min-width: 768px) {
+  /* Hero TABLETS */
+  .hero__image img, .hero__image--author img {
+    width: 60%; }
+  .bt__hero {
+    font-size: 20px; }
+  /* Main TABLET Flexbox (cards)*/
+  main {
+    grid-area: main;
+    width: 90%;
+    margin: 30px auto 0 auto; }
+  main h2 {
+    color: #2F2A2C;
+    font-family: "Vollkorn";
+    font-size: 36px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    text-align: center; }
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px; } }
+
+/* DESKTOP */
+@media only screen and (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header header" "hero hero" "main main" "footer footer"; }
+  /* Header DESKTOP */
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto 0 auto; }
+  .logo img {
+    height: 85px;
+    align-self: center; }
+  .menu {
+    align-self: center; }
+  /* Hero DESKTOP Flexbox */
+  .hero__home, .hero__home--author, .hero__home--about--nft, .hero__home--future--projects, .hero__home--contact {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 25px;
+    margin-top: 20px; }
+  .hero__image, .hero__image--author {
+    order: 2;
+    align-self: center;
+    flex-grow: 1;
+    flex-basis: 0; }
+  .hero__contact--form {
+    order: 2;
+    align-self: center;
+    flex-grow: 1;
+    flex-basis: 0; }
+  .hero__image img, .hero__image--author img, .hero__content--future--projects img {
+    width: 100%; }
+  .hero__content, .hero__content--author, .hero__content--future--projects, .hero__content-contact--info {
+    order: 1;
+    align-self: center;
+    flex-grow: 1;
+    flex-basis: 0; }
+  .hero__content h1, .hero__content--author h1 {
+    font-size: 56px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    text-align: left; }
+  .hero__content--about--nft h1, .hero__content--future--projects h1 {
+    font-size: 56px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    text-align: center; }
+  .hero__content p, .hero__content--author p, .hero__home--about--nft p, .hero__content--future--projects p {
+    color: #2F2A2C;
+    font-size: 20px;
+    font-family: "Open Sans";
+    margin-top: 10px;
+    text-align: left; }
+  .hero__home--about--nft p:first-letter {
+    color: #2abe54;
+    font-weight: bold;
+    font-size: 1.5em; }
+  .bt__hero {
+    font-size: 19px;
+    padding: 15px 25px;
+    margin-top: 25px;
+    display: block;
+    text-align: center;
+    width: 170px; }
+  /* Main DESKETOP Flexbox (cards)*/
+  main {
+    grid-area: main;
+    width: 80%;
+    margin: 65px auto 0 auto; }
+  main h2 {
+    color: #2F2A2C;
+    font-family: "Vollkorn";
+    font-size: 43px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    text-align: left; }
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px; }
+  /* Footer DESKTOP */
+  footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 70px auto 20px auto; }
+  .footer__content {
+    text-align: left; }
+  .footer__content img {
+    height: 75px;
+    margin-bottom: 0px; }
+  .footer__content p {
+    margin-top: 0px; }
+  .social-media {
+    flex-grow: 1;
+    text-align: right; }
+  .social-media ul {
+    list-style: none;
+    padding: 0px; }
+  .social-media ul li {
+    display: inline-block; }
+  .social-media ul li img {
+    width: 30px;
+    padding-left: 10px; } }

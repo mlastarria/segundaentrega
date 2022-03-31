@@ -1,0 +1,142 @@
+
+
+/* Hero Mobile */
+
+.hero__home , .hero__home--author , .hero__home--about--nft , .hero__home--future--projects , .hero__home--contact {
+    grid-area:hero;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    width: 90%;
+   
+  }
+  
+  .hero__image , .hero__image--author{
+    display: block;
+  }
+  
+  
+  .hero__image img , .hero__image--author img , .hero__content--future--projects img{
+    width: 100%;
+    
+  }
+  
+  .hero__content , .hero__content--author , .hero__content--about--nft , .hero__content--future--projects , .hero__content-contact--info{
+    display: block;
+  }
+  
+  .hero__contact--form{
+    display: block;
+    text-align: left;
+    
+  }
+  
+  
+  .hero__content h1 , .hero__content--author h1 , .hero__content--about--nft h1 , .hero__content--future--projects h1 , .hero__content-contact--info h1{
+    color:#2F2A2C;
+    font-family: 'Vollkorn', serif;
+    font-size: 46px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+   
+  }
+  
+  .hero__content--nft{
+    background: #36CC60;
+    background: -webkit-linear-gradient(to bottom right, #36CC60 0%, #0085A9 100%);
+    background: -moz-linear-gradient(to bottom right, #36CC60 0%, #0085A9 100%);
+    background: linear-gradient(to bottom right, #36CC60 0%, #0085A9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
+  .hero__content p , .hero__content--author p , .hero__content--about--nft p , .hero__content--future--projects p , .hero__content-contact--info p{
+    color: #2F2A2C;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 15px;
+  
+  }
+  
+  
+  
+  
+  /* Main Mobile Flexbox (cards)*/
+  
+  main{
+    grid-area: main;
+    width: 80%;
+    margin: 30px auto 0 auto;
+    
+  }
+  
+  main h2{
+    color:#2F2A2C;
+    font-family: 'Vollkorn', serif;
+    font-size: 36px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+  
+  .card-container{
+    display:flex;
+    flex-direction: column;
+  }
+  
+  .item-card{
+    background-color: #00B0F5;
+    padding:15px 20px 15px 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    flex-grow: 1;
+  }
+  
+  .item-card img{
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  
+  .item-card h3{
+    font-family: 'Vollkorn', serif;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 5px;
+    margin-top: 8px;
+    overflow: visible;
+    color: #fff;
+  }
+  
+  
+  .item-card p{
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      text-align: left;
+      margin-top: 5px;
+      color: #FCE0EE;
+      margin-bottom: 5px;
+  }
+  
+  .eth-price{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+   
+  }
+  
+  .eth-price img{
+    width: 15px;
+    height: fit-content;
+  
+   
+  }
+  
+  .price-card{
+    color: #ffffff;
+    font-size: 14px;
+    padding-left: 5px;
+    
+  
+  }
+  
